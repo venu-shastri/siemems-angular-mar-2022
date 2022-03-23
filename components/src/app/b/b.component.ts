@@ -18,7 +18,7 @@ export class BComponent  {
     this.customEvent.emit("Message from Component B");
   }
 
-  subcribe(callBackFn:any){
+  registerCallbackFunWithCustomEvent(callBackFn:any){
 
     this.customEvent.subscribe(callBackFn);
 

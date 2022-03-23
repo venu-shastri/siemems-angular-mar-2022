@@ -25,13 +25,18 @@ export class AComponent  implements AfterViewInit{
     console.log(this.paragraph?.nativeElement);
   }
   ngAfterViewInit(){
-    this.viewChild?.subcribe(this.callbackFun);
+    //this.viewChild?.subcribe(this.callbackFun.bind(this));
+    //let _this=this;
+    this.viewChild?.registerCallbackFunWithCustomEvent((data:string)=>{
+      this.callbackFun(data);
+    });
   }
 
   callbackFun(data:string){
-    console.log(data);
+    //console.log(data);
+    console.log(this);
     this.viewChildData=`${data}`;
-    console.log(this.viewChildData);
+    //console.log(this.viewChildData);
   }
 
   }
