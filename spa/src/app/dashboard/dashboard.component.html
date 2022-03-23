@@ -1,0 +1,16 @@
+<p>dashboard works!</p>
+<output>{{"welcome !" + currentUser}}</output> <br/>
+<a [routerLink]="['/home']">Logout</a>
+<div>
+
+  <div style="float:left;width:25%">
+  <a [routerLink]="['./customers']">Customers</a><br/>
+  <a [routerLink]="['./projects']">Projects</a><br/>
+  <a href="#">Feedback</a><br/>
+  <a href="#">Tickets</a><br/>
+
+  </div>
+  <div style="float:left;width:75%">
+  <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="login-form">
+  <form #formGropuRef="ngForm" (ngSubmit)="onLogin(formGropuRef.form)">
+    <h1>Login</h1>
+    <div class="content">
+      <div class="input-field">
+        <input name="emailCtrl" [(ngModel)]="email" #emailFormControlRef="ngModel" type="email" placeholder="Email"
+               autocomplete="nope"
+               required
+               pattern="[^ @]*@[^ @]*"/>
+      </div>
+      <div *ngIf="emailFormControlRef.errors && (emailFormControlRef.dirty || emailFormControlRef.touched)">
+        <p *ngIf="emailFormControlRef.errors.required">Email is required</p>
+        <p *ngIf="emailFormControlRef.errors.pattern">Email must contain at least the @ character</p>
+      </div>
+
+      <div class="input-field">
+        <input name="passwordCtrl" [(ngModel)]="password" #passwordFormControlRef='ngModel' type="password"
+          placeholder="Password" autocomplete="new-password"
+          required
+           minlength="5"/>
+      </div>
+      <div *ngIf="passwordFormControlRef.errors && (passwordFormControlRef.dirty || passwordFormControlRef.touched)">
+        <p *ngIf="passwordFormControlRef.errors.required">Password is required</p>
+        <p *ngIf="passwordFormControlRef.errors.minlength">Password must contain at least 5 charcters</p>
+      </div>
+
+      <div class="input-field">
+        <input
+        name="retypePasswordCtrl"
+         type="password" placeholder="RetypePassword"
+           autocomplete="new-password" required minlength="5" />
+      </div>
+
+
+    </div>
+    <div class="action">
+      <!-- <button>Sign Up</button> -->
+      <input type="submit" value="Sign Up" formnovalidate/>
+      <input type="button" value="Clear"/>
+
+    </div>
+  </form>
+</div>

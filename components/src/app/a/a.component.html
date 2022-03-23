@@ -1,0 +1,9 @@
+<fieldset>
+  <legend>Component - A</legend>
+  <p #p>a works!</p>
+<app-b [message]="'hi'" (customEvent)="callbackFun($event)" ></app-b>
+<app-b #bRef></app-b>
+<output>{{viewChildData}}</output>
+<button (click)="setMessage()">SetViesChildMessage</button>
+
+</fieldset>
