@@ -10,6 +10,12 @@ import { TitleComponent } from './title/title.component';
 import { BodyComponent } from './body/body.component';
 import { H1Component } from './h1/h1.component';
 import { ParagraphComponent } from './paragraph/paragraph.component';
+import { TimerComponent } from './timer/timer.component';
+import { OutputComponent } from './output/output.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { MasterComponent } from './master/master.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +27,13 @@ import { ParagraphComponent } from './paragraph/paragraph.component';
     TitleComponent,
     BodyComponent,
     H1Component,
-    ParagraphComponent
+    ParagraphComponent,
+    TimerComponent,
+    OutputComponent,
+    ParentComponent,
+    ChildComponent,
+    MasterComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule

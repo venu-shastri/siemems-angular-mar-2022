@@ -1,0 +1,5 @@
+<p>master works!</p>
+<input type="text" #input placeholder="Enter Book Name"/>
+<button (click)="addNewBook(input.value)">AddNewBook</button>
+<app-details [data]="books"></app-details>
+
